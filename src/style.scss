@@ -1,0 +1,190 @@
+@font-face {
+  font-family: Roundo;
+  src: url(./fonts/Roundo-Regular.ttf);
+}
+
+@font-face{
+  font-family: Franchise;
+  src: url(./fonts/franchise_2/Franchise.ttf);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  height: 100vh;
+  background-image: url("https://img.freepik.com/free-vector/color-seamless-space-pattern_102902-2360.jpg");
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  border: 5px white solid;
+  min-width: 500px;
+  margin-top: 20px;
+  background-color: rgb(12,46,129);
+  padding: 10px;
+  border-radius: 5px;
+  color: rgb(10,194,119);
+  font-size: 60px;
+  border-radius: 18px 18px 0px 0px;
+  font-family: Franchise;
+  & span{
+    color: white;
+  }
+}
+
+h3 {
+  padding: 10px;
+  color: rgb(12, 46, 129);
+  font-family: Roundo;
+  background-color: white;
+  border-radius: 0px 0px 15px 15px;
+}
+
+header {
+  width: 100vw;
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 100px;
+
+  h3 {
+    min-width: 160px;
+  }
+
+  & div:nth-child(1) {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: inherit;
+    & img {
+      width: 200px;
+    }
+  }
+  & div {
+    margin-top: 20px;
+  }
+  & div:nth-child(2) img {
+    border: 10px rgb(97, 157, 182) solid;
+    border-radius: 10px;
+    box-shadow: 15px 10px 7px black;
+    width: 14vw;
+    box-sizing: border-box;
+  }
+}
+
+#mainInfo {
+  margin-top: 100px;
+  border-radius: 30px;
+  height: 60vh;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  &:nth-child(1) img,
+  &:nth-child(2) img {
+    height: 100%;
+    width: 200px;
+  }
+  div {
+    height: 500px;
+  }
+  & div:nth-child(2) {
+    height: 100px;
+  }
+}
+
+#firstRow,
+#secondRow {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+
+  & span {
+    height: 400px;
+    width: 300px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    & a {
+      border-radius: 5px;
+      background-color: white;
+      padding: 5px;
+      text-decoration: none;
+      color: rgb(97, 157, 182);
+      cursor: pointer;
+
+      &:hover {
+        color: purple;
+      }
+    }
+    & p {
+      border-radius: 5px;
+      border: 6px solid rgb(84, 159, 118);
+      background-color: white;
+      padding: 5px;
+      text-decoration: none;
+      color: rgb(97, 157, 182);
+      width: 80%;
+      text-align: center;
+      cursor:default;
+    }
+    & h3 {
+      position: absolute;
+    }
+
+    & span:first-child {
+      justify-content: flex-start;
+    }
+  }
+
+  & img {
+    width: 300px;
+    height: 400px;
+  }
+}
+
+#firstStudent {
+  background-image: url(./images/21B46F79-7F41-4EF6-876A-866A4BF99238.jpeg);
+  border: 15px solid rgb(116, 195, 226);
+}
+
+#secondStudent {
+  background-image: url(./images/330829030_1577748049318893_7590085376626793145_n.jpeg);
+  background-size: 350px;
+  background-position-x: -18px;
+  background-repeat: no-repeat;
+  border: 15px solid rgb(127, 179, 179);
+}
+
+#thirdStudent {
+  background-image: url(./images/Background.png);
+  border: 15px solid rgb(177, 149, 214);
+}
+
+#fourthStudent {
+  background-image: url(./images/Captura\ de\ ecrã\ 2023-02-06\,\ às\ 10.37.01.png);
+  background-repeat: no-repeat;
+  background-size: 400px;
+  border: 15px solid rgb(84, 164, 116);
+}
+
+#fifthStudent {
+  background-image: url(./images/Captura\ de\ ecrã\ 2023-02-06\,\ às\ 10.49.01.png);
+  background-repeat: no-repeat;
+  background-size: 300px;
+  border: 15px solid rgb(214, 167, 105);
+}
+
+#sixthStudent {
+  background-image: url(./images/Captura\ de\ ecrã\ 2023-02-06\,\ às\ 10.51.10.png);
+  background-repeat: no-repeat;
+  background-size: 370px;
+  border: 15px solid rgb(203, 104, 144);
+}
