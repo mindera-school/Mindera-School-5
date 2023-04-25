@@ -1,6 +1,14 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+export const HeaderDummer = styled.div`
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  margin-bottom: 15px;
+`;
+
 export const Wrapper = styled.header`
   position: fixed;
   top: 0;
@@ -12,6 +20,7 @@ export const Wrapper = styled.header`
   align-items: center;
   padding: 0 20px;
   background-color: white;
+  box-shadow: 0px -50px 95px 29px rgba(0, 0, 0, 0.75);
 
   @media (max-width: 768px) {
     padding: 0 10px;
@@ -113,13 +122,14 @@ export const UserName = styled.p`
 export const Sidebar = styled.div`
   position: fixed;
   top: 0;
-  right: ${({ isOpen }) => (isOpen ? "-60%" : "-108%")};
+  right: ${({ isOpen }) => (isOpen ? "-60%" : "-111%")};
   height: 100vh;
   width: 200px;
   background-color: white;
   padding: 60px 20px;
   transition: padding 0.3s ease-in-out, right 0.3s ease-in-out;
   z-index: 10;
+  box-shadow: 12px 0px 20px 12px rgba(0, 0, 0, 0.75);
 
   @media (max-width: 768px) {
     width: 100%;
