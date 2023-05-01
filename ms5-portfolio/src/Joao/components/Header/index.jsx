@@ -11,11 +11,11 @@ import {
   SidebarLink,
   SidebarUserName,
   CloseButton,
-  HeaderDummer
+  HeaderDummer,
 } from "./styles";
 import minderaLogo from "../../images/minderaLogo.png";
 
-function Header() {
+function Header({ onScroll }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -31,16 +31,24 @@ function Header() {
         </LogoLink>
         <NavList className={isOpen ? "show" : ""}>
           <li>
-            <NavItemLink href="#projects">Projects</NavItemLink>
+            <NavItemLink onClick={() => onScroll("#about-me")}>
+              About me
+            </NavItemLink>
           </li>
           <li>
-            <NavItemLink href="#what-i-use">What I use</NavItemLink>
+            <NavItemLink onClick={() => onScroll("#what-i-use")}>
+              What I use
+            </NavItemLink>
           </li>
           <li>
-            <NavItemLink href="#about-me">About me</NavItemLink>
+            <NavItemLink onClick={() => onScroll("#projects")}>
+              Projects
+            </NavItemLink>
           </li>
           <li>
-            <NavItemLink href="#contact">Contact</NavItemLink>
+            <NavItemLink onClick={() => onScroll("#contact")}>
+              Contact
+            </NavItemLink>
           </li>
         </NavList>
         <UserName>João Rocha</UserName>
@@ -53,10 +61,18 @@ function Header() {
           <CloseButton onClick={toggleMenu}>
             <FaTimes />
           </CloseButton>
-          <SidebarLink href="#projects">Projects</SidebarLink>
-          <SidebarLink href="#what-i-use">What I use</SidebarLink>
-          <SidebarLink href="#about-me">About me</SidebarLink>
-          <SidebarLink href="#contact">Contact</SidebarLink>
+          <SidebarLink onClick={() => onScroll("#about-me")}>
+            About me
+          </SidebarLink>
+          <SidebarLink onClick={() => onScroll("#what-i-use")}>
+            What I use
+          </SidebarLink>
+          <SidebarLink onClick={() => onScroll("#projects")}>
+            Projects
+          </SidebarLink>
+          <SidebarLink onClick={() => onScroll("#contact")}>
+            Contact
+          </SidebarLink>
           <SidebarUserName>João Rocha</SidebarUserName>
         </Sidebar>
       </Wrapper>

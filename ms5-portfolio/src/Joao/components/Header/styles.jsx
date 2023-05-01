@@ -5,7 +5,7 @@ export const HeaderDummer = styled.div`
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 60px;
   margin-bottom: 15px;
 `;
 
@@ -21,6 +21,7 @@ export const Wrapper = styled.header`
   padding: 0 20px;
   background-color: white;
   box-shadow: 0px -50px 95px 29px rgba(0, 0, 0, 0.75);
+  z-index: 999;
 
   @media (max-width: 768px) {
     padding: 0 10px;
@@ -73,6 +74,7 @@ export const NavItemLink = styled.a`
   transition: color 0.2s ease-in-out;
   font-weight: bold;
   font-size: 24px;
+  cursor: pointer;
 
   &:hover {
     color: #c1a615;
@@ -144,6 +146,7 @@ export const SidebarLink = styled.a`
   font-size: 24px;
   margin-bottom: 20px;
   transition: color 0.2s ease-in-out;
+  cursor: pointer;
 
   &:hover {
     color: #c1a615;
