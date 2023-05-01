@@ -27,12 +27,19 @@ function Footer() {
           <ContactLink
             href="https://discordapp.com/users/383003488055197697"
             color="#7289da"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaDiscord />
           </ContactLink>
         </li>
         <li>
-          <ContactLink href="https://twitter.com/rocha1313dev" color="#1da1f2">
+          <ContactLink
+            href="https://twitter.com/rocha1313dev"
+            color="#1da1f2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaTwitter />
           </ContactLink>
         </li>
@@ -40,12 +47,19 @@ function Footer() {
           <ContactLink
             href="https://www.linkedin.com/in/joão-rocha-905864274/"
             color="#0077b5"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FaLinkedin />
           </ContactLink>
         </li>
         <li>
-          <ContactLink href="https://github.com/Rocha1313" color="#24292e">
+          <ContactLink
+            href="https://github.com/Rocha1313"
+            color="#24292e"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaGithub />
           </ContactLink>
         </li>
