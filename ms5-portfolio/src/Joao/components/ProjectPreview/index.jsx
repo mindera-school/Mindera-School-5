@@ -5,8 +5,9 @@ import {
   PreviewText,
   PreviewTitle,
   PreviewTechnologies,
+  Anchor
 } from "./styles";
-import GitHubImage from "../../images/github-universe.png"
+import GitHubImage from "../../images/github-universe.png";
 
 const ProjectPreview = ({ project }) => {
   const displayedTechnologies =
@@ -18,21 +19,25 @@ const ProjectPreview = ({ project }) => {
     return colors[randomIndex];
   };
 
+  const gitHubLink = project.clone_url;
+
   return (
-    <PreviewContainer>
-      {GitHubImage && <PreviewImage src={GitHubImage} alt={project.name} />}
-      <PreviewText>
-        <PreviewTitle>{project.name}</PreviewTitle>
-        <PreviewTechnologies>
-          {displayedTechnologies.map((tech, index) => (
-            <span key={index} style={{ backgroundColor: getRandomColor() }}>
-              {tech}
-            </span>
-          ))}
-          {project.topics.length > 5 && " . . ."}
-        </PreviewTechnologies>
-      </PreviewText>
-    </PreviewContainer>
+    <Anchor href={gitHubLink} target="_blank" rel="noopener noreferrer">
+      <PreviewContainer>
+        {GitHubImage && <PreviewImage src={GitHubImage} alt={project.name} />}
+        <PreviewText>
+          <PreviewTitle>{project.name}</PreviewTitle>
+          <PreviewTechnologies>
+            {displayedTechnologies.map((tech, index) => (
+              <span key={index} style={{ backgroundColor: getRandomColor() }}>
+                {tech}
+              </span>
+            ))}
+            {project.topics.length > 5 && " . . ."}
+          </PreviewTechnologies>
+        </PreviewText>
+      </PreviewContainer>
+    </Anchor>
   );
 };
 

@@ -4,7 +4,7 @@ export const ContactContainer = styled.footer`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 94.3%;
   padding: 3rem;
   background-color: white;
   margin-top: 2vw;
@@ -15,7 +15,7 @@ export const ContactTitle = styled.h2`
   font-weight: 600;
   margin-top: 0;
   margin-bottom: 3rem;
-  color: #c1a615;
+  color: black;
 `;
 
 export const ContactList = styled.ul`

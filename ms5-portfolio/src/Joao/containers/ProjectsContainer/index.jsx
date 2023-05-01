@@ -12,28 +12,36 @@ import {
   SearchBar,
 } from "./styles";
 
+const reposThatWantToShow = [
+  630556077, 627448880, 595681527, 595655170, 588234138, 588560239, 593567101,
+];
+
 function ProjectsContainer() {
   const repos = useContext(ReposContext);
   const [currentPage, setCurrentPage] = useState(1);
   const [searchValue, setSearchValue] = useState("");
 
+  console.log(repos);
+
   useEffect(() => {
     setCurrentPage(1);
   }, [searchValue]);
 
-  const filteredProjects = repos.filter((project) => {
-    const nameMatch = project.name
-      .toLowerCase()
-      .includes(searchValue.toLowerCase());
-    const techMatch = project.topics.some((tech) =>
-      tech.toLowerCase().includes(searchValue.toLowerCase())
-    );
-    return nameMatch || techMatch;
-  });
+  const reposToShow = repos.filter((repo) =>
+    reposThatWantToShow.includes(repo.id)
+  );
+
+  const filteredProjects = reposToShow.filter(
+    (project) =>
+      project.name.toLowerCase().includes(searchValue.toLowerCase()) ||
+      project.topics.some((tech) =>
+        tech.toLowerCase().includes(searchValue.toLowerCase())
+      )
+  );
 
   const projectsPerPage = 4;
   const totalProjects =
-    searchValue === "" ? repos.length : filteredProjects.length;
+    searchValue === "" ? reposToShow.length : filteredProjects.length;
   const totalPages = Math.ceil(totalProjects / projectsPerPage);
 
   const handlePreviousPage = () => {
@@ -48,7 +56,10 @@ function ProjectsContainer() {
 
   const currentProjects =
     searchValue === ""
-      ? repos.slice(firstProjectIndex, firstProjectIndex + projectsPerPage)
+      ? reposToShow.slice(
+          firstProjectIndex,
+          firstProjectIndex + projectsPerPage
+        )
       : filteredProjects.slice(
           firstProjectIndex,
           firstProjectIndex + projectsPerPage

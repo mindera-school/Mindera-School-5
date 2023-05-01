@@ -81,3 +81,8 @@ export const PreviewTechnologies = styled.p`
     }
   }
 `;
+
+export const Anchor = styled.a`
+  text-decoration: none;
+  color: black;
+`;
