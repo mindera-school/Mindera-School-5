@@ -5,7 +5,7 @@ export const Wrapper = styled.header`
     align-items: center;
     justify-content: center;
     width: 100vw;
-    height: 10vh;
+    height: 12vh;
 `;
 
 export const HeaderContent = styled.div`
@@ -49,6 +49,7 @@ export const LogoContainer = styled.div`
     flex-direction: column;
     align-items: center;
     height: 100%;
+    width: 400px;
     padding: 0 10px;
     font-family: Sherman;
     font-size: 24px;
@@ -66,5 +67,7 @@ export const LogoContainer = styled.div`
     span {
         margin-top: 5px;
         color: #569DAA;
+        width: 100%;
+        text-align: center;
     }
 `;
