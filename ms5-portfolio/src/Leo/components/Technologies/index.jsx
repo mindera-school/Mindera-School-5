@@ -29,10 +29,10 @@ function Technologies({ isVisible }) {
                         <img src="https://logos-download.com/wp-content/uploads/2016/09/Sass_logo.png" />
                     </TechCard>
                     <TechCard isVisible={isVis}>
-                        <img src="https://assets.stickpng.com/images/584830f5cef1014c0b5e4aa1.png" />
+                        <img src="https://logowik.com/content/uploads/images/react.jpg" />
                     </TechCard>
                     <TechCard isVisible={isVis}>
-                        <img src="https://assets.stickpng.com/images/5848309bcef1014c0b5e4a9a.png" />
+                        <img src="https://brandslogos.com/wp-content/uploads/images/large/redux-logo.png" />
                     </TechCard>
                     <TechCard isVisible={isVis}>
                         <img src="https://cdn.worldvectorlogo.com/logos/styled-components-1.svg" />
@@ -42,6 +42,9 @@ function Technologies({ isVisible }) {
                     </TechCard>
                     <TechCard isVisible={isVis}>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png" />
+                    </TechCard>
+                    <TechCard isVisible={isVis}>
+                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-firebase-3521427-2944871.png?f=webp&w=256" />
                     </TechCard>
                 </Grid>
             </Poster>

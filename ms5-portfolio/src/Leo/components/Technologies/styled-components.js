@@ -28,17 +28,17 @@ const FadeInAnim = keyframes`
 
 
 export const Wrapper = styled.div`
-    height: 1000px;
+    height: fit-content;
     width: 100vw;
     display: flex;
     justify-content: center;
+    margin-bottom: 200px;
 `;
 
 export const Poster = styled.div`
     background-color: #87CBB9;
     width: 100%;
     height: fit-content;
-    border-radius: 20px;
     display: flex;
     padding: 20px;
     box-sizing: border-box;

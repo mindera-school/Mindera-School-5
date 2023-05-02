@@ -5,20 +5,14 @@ import { FontStyles, GlobalStyle } from "./global-styles";
 import { useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import Technologies from "./components/Technologies";
+import Projects from "./components/Projects/Projects";
+import Contacts from "./components/Contacts/Contacts";
 
 export default function Main() {
   const aboutMe = useRef(null);
   const techs = useRef(null);
-  const [aboutMeVis, setAboutMeVis] = useState();
+  const projects = useRef(null);
   const [techsVis, setTechsVis] = useState();
-
-  useEffect(() => {
-    const aboutMeObserver = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      setAboutMeVis(entry.isIntersecting);
-    });
-    aboutMeObserver.observe(aboutMe.current);
-  }, []);
 
   useEffect(() => {
     const techObserver = new IntersectionObserver((entries) => {
@@ -40,15 +34,28 @@ export default function Main() {
     });
   };
 
+  const scrollToProjects = () => {
+    projects.current.scrollIntoView({
+      behavior: "smooth",
+      block: "end"
+    });
+  };
+
   return <>
     <GlobalStyle />
     <FontStyles />
-    <Header scrollToAboutMe={scrollToAboutMe} scrollToTech={scrollToTech} />
+    <Header scrollToAboutMe={scrollToAboutMe} scrollToTech={scrollToTech} scrollToProjects={scrollToProjects} />
     <div ref={aboutMe}>
       <AboutMe />
     </div>
     <div ref={techs}>
       <Technologies isVisible={techsVis} />
+    </div>
+    <div ref={projects}>
+      <Projects />
+    </div>
+    <div>
+      <Contacts />
     </div>
   </>
 }

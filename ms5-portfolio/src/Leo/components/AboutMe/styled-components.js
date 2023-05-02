@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     display: flex;
+    min-height: 65vh;
     height: fit-content;
     width: 100vw;
     justify-content: center;

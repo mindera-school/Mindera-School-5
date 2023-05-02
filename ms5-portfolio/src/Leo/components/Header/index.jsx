@@ -2,7 +2,7 @@ import { HeaderContent, HeaderLink, LinksContainer, LogoContainer, Wrapper } fro
 import LeoLogo from "../../assets/images/image (4).png";
 import { FaCode } from "react-icons/fa";
 
-function Header({ scrollToAboutMe, scrollToTech }) {
+function Header({ scrollToAboutMe, scrollToTech, scrollToProjects }) {
 
     return <Wrapper>
         <HeaderContent>
@@ -20,7 +20,7 @@ function Header({ scrollToAboutMe, scrollToTech }) {
                 <HeaderLink onClick={() => scrollToTech()}>
                     Technologies I Use
                 </HeaderLink>
-                <HeaderLink>
+                <HeaderLink onClick={() => scrollToProjects()}>
                     My Projects
                 </HeaderLink>
                 <HeaderLink>
