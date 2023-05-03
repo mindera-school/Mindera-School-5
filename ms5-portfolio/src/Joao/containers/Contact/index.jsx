@@ -19,7 +19,7 @@ function Footer() {
       <ContactTitle>Contact me with</ContactTitle>
       <ContactList>
         <li>
-          <ContactLink href="mailto:rjoao0112@gmail.com" color="#d54e21">
+          <ContactLink href="mailto:rjoaoprofissional0112@gmail.com" color="#d54e21">
             <FaEnvelope />
           </ContactLink>
         </li>
