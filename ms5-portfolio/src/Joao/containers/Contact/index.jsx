@@ -35,7 +35,7 @@ function Footer() {
         </li>
         <li>
           <ContactLink
-            href="https://twitter.com/rocha1313dev"
+            href="https://twitter.com/Rocha13Dev"
             color="#1da1f2"
             target="_blank"
             rel="noopener noreferrer"
