@@ -32,7 +32,7 @@ function Technologies({ isVisible }) {
                         <img src="https://logowik.com/content/uploads/images/react.jpg" />
                     </TechCard>
                     <TechCard isVisible={isVis}>
-                        <img src="https://brandslogos.com/wp-content/uploads/images/large/redux-logo.png" />
+                        <img src="https://assets.stickpng.com/thumbs/62c536ab3a321dd181302f81.png" />
                     </TechCard>
                     <TechCard isVisible={isVis}>
                         <img src="https://cdn.worldvectorlogo.com/logos/styled-components-1.svg" />
