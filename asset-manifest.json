@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.645c0db7.js",
+    "static/media/postgresql-logo.png": "/static/media/postgresql-logo.5a13e254fb0c5ae14652.png",
+    "static/media/spring-logo.png": "/static/media/spring-logo.1a753d3a09a8df3cec6c.png",
+    "static/media/github-universe.png": "/static/media/github-universe.2de52f1d092185836bc0.png",
+    "static/media/react-logo.png": "/static/media/react-logo.04dc60f505fa7d4b6dab.png",
+    "static/media/profileImage.jpeg": "/static/media/profileImage.f16584c7530414610431.jpeg",
+    "static/media/aws-logo.png": "/static/media/aws-logo.9df95f9498f0df85e315.png",
+    "static/media/java-logo.png": "/static/media/java-logo.375f91150aebfc2e19ef.png",
+    "index.html": "/index.html",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.645c0db7.js.map": "/static/js/main.645c0db7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.645c0db7.js"
+  ]
+}
