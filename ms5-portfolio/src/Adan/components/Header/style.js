@@ -23,5 +23,6 @@ export const StyledHeader = styled.header`
         height: 10%;
         top: 40%;
         right: 1%;
+        cursor: pointer;
     }
 `
