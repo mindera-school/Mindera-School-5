@@ -2,6 +2,7 @@ import React, { useState, createContext } from "react";
 import Header from "./components/Header";
 import { MainStyle } from "./adanStyles";
 import Profile from "./components/Profile";
+import Projects from "./components/Projects";
 
 export const adanContext = createContext(null);
 
@@ -12,7 +13,7 @@ export default function Main() {
 
   const content = {
     adan: (<Profile />),
-    projects: (<h1>teupai</h1>)
+    projects: (<Projects />)
   }
 
   return(

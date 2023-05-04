@@ -18,9 +18,9 @@ export const SideMenu = styled.div`
     z-index: 15;
     background-color: white;
 
-    :first-child{
+    .sidemenu-content{
         width: 100%;
-        height: 100%;
+        height: 200%;
         position: relative;
     }
     
@@ -32,9 +32,22 @@ export const SideMenu = styled.div`
 
     & ul {
         list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 5%;
+        overflow: hidden;
+        
     }
 `
 
 export const Li = styled.li`
-    border-bottom: ${props => props.activePage === props.thisPage ? "1px solid black" : "none" };
+    height: 100%;
+    & button{
+        font-size: xx-large;
+        border-bottom: ${props => props.activePage === props.thisPage ? "1px solid black" : "none" };
+        width: 100%;
+        height: 100%;
+    }
 `

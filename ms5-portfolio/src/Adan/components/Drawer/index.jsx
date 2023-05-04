@@ -12,7 +12,7 @@ const Drawer = ({isOpen, close}) => {
         <>
         <Block isOpen={isOpen} onClick={close} activePage={activePage}/>
         <SideMenu isOpen={isOpen}>
-            <div>
+            <div className="sidemenu-content">
                 <button className="close-btn" onClick={close}><BiCaretRight size={30}/></button>
                 <ul> 
                     <Li activePage={activePage} thisPage="adan" ><button value="adan" onClick={() => setActivePage("adan")}>Adan</button></Li>
