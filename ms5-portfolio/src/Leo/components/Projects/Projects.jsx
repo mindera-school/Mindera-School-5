@@ -4,10 +4,8 @@ import { Container, ProjectCard } from "./styled-components";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
 function Projects() {
-
     const [repos, setRepos] = useState([])
 
-    console.log(repos);
     useEffect(() => {
         const fetchRepos = async () => {
             const response = await axios.get(
