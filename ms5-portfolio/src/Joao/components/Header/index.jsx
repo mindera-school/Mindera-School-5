@@ -8,13 +8,14 @@ import {
   HamburgerMenu,
   UserName,
   Sidebar,
-  SidebarLink, 
+  SidebarLink,
   SidebarUserName,
-  CloseButton
+  CloseButton,
+  HeaderDummer,
 } from "./styles";
 import minderaLogo from "../../images/minderaLogo.png";
 
-function Header() {
+function Header({ onScroll }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -22,41 +23,60 @@ function Header() {
   };
 
   return (
-    <Wrapper>
-      <LogoLink to="/">
-        <img src={minderaLogo} alt="Mindera Logo" />
-      </LogoLink>
-      <NavList className={isOpen ? "show" : ""}>
-        <li>
-          <NavItemLink href="#projects">Projects</NavItemLink>
-        </li>
-        <li>
-          <NavItemLink href="#what-i-use">What I use</NavItemLink>
-        </li>
-        <li>
-          <NavItemLink href="#about-me">About me</NavItemLink>
-        </li>
-        <li>
-          <NavItemLink href="#contact">Contact</NavItemLink>
-        </li>
-      </NavList>
-      <UserName>João Rocha</UserName>
-      <HamburgerMenu isOpen={isOpen} onClick={toggleMenu}>
-        <span />
-        <span />
-        <span />
-      </HamburgerMenu>
-      <Sidebar isOpen={isOpen}>
-        <CloseButton onClick={toggleMenu}>
-          <FaTimes />
-        </CloseButton>
-        <SidebarLink href="#projects">Projects</SidebarLink>
-        <SidebarLink href="#what-i-use">What I use</SidebarLink>
-        <SidebarLink href="#about-me">About me</SidebarLink>
-        <SidebarLink href="#contact">Contact</SidebarLink>
-        <SidebarUserName>João Rocha</SidebarUserName>
-      </Sidebar>
-    </Wrapper>
+    <>
+      <HeaderDummer />
+      <Wrapper>
+        <LogoLink to="/">
+          <img src={minderaLogo} alt="Mindera Logo" />
+        </LogoLink>
+        <NavList className={isOpen ? "show" : ""}>
+          <li>
+            <NavItemLink onClick={() => onScroll("#about-me")}>
+              About me
+            </NavItemLink>
+          </li>
+          <li>
+            <NavItemLink onClick={() => onScroll("#what-i-use")}>
+              What I use
+            </NavItemLink>
+          </li>
+          <li>
+            <NavItemLink onClick={() => onScroll("#projects")}>
+              Projects
+            </NavItemLink>
+          </li>
+          <li>
+            <NavItemLink onClick={() => onScroll("#contact")}>
+              Contact
+            </NavItemLink>
+          </li>
+        </NavList>
+        <UserName>João Rocha</UserName>
+        <HamburgerMenu isOpen={isOpen} onClick={toggleMenu}>
+          <span />
+          <span />
+          <span />
+        </HamburgerMenu>
+        <Sidebar isOpen={isOpen}>
+          <CloseButton onClick={toggleMenu}>
+            <FaTimes />
+          </CloseButton>
+          <SidebarLink onClick={() => onScroll("#about-me")}>
+            About me
+          </SidebarLink>
+          <SidebarLink onClick={() => onScroll("#what-i-use")}>
+            What I use
+          </SidebarLink>
+          <SidebarLink onClick={() => onScroll("#projects")}>
+            Projects
+          </SidebarLink>
+          <SidebarLink onClick={() => onScroll("#contact")}>
+            Contact
+          </SidebarLink>
+          <SidebarUserName>João Rocha</SidebarUserName>
+        </Sidebar>
+      </Wrapper>
+    </>
   );
 }
 
